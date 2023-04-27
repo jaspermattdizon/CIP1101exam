@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ysabeau:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Ysabeau', sans-serif;
+    list-style: none;
+}
+
+nav{
+    height: 80px;
+    z-index: 999;
+
+}
+
+.logo{
+    position: absolute;
+    top: 25px;
+    left: 12%;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    
+    
+
+    
+}
+
+nav ul{
+    float: right;
+    margin-right: 12%;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+    line-height: 80px;
+}
+
+nav ul li a{
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    color: white;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+
+nav ul li a:hover::before{
+    transform:scale(1) ;
+    transform-origin: left ;
+}
+
+label #btn,#cancel{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    color: white;
+
+}
+
+
+
+#check{
+    display: none;
+
+}
+@media (max-width: 996px) {
+    .logo{
+        left: 6%;
+        width: 130px;
+        font-size: .8em;
+    }
+    nav ul li a{
+        font-size: 15px;
+
+    }
+    
+}
+
+@media (max-width: 1222px) {
+    .logo{
+        left: 6%;
+        font-size: 18px;
+    }
+    nav ul li a{
+        font-size: 15px;
+
+    }
+    
+}
+
+@media (max-width: 944px) {
+    .logo{
+        left: 6%;
+        width: 130px;
+    }
+    nav ul li a{
+        font-size: 15px;
+
+    }
+    
+}
+
+@media (max-width: 860px) {
+    nav{
+        background-color: #34495e;
+        height: 90px;
+        
+    }
+    label #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #34495e;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .3s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: white;
+        top: 80px;
+        left: 0;
+
+
+    }
+
+
+    #check:checked ~ ul{
+        left: 0
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+    
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+ 
+ .cover{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(31, 59, 84, .45);
+ 
+ 
+ }
+
+
+
+ .container{
+    width: 80%;
+    margin: auto;
+ }
+
+.container h1{
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 150px;
+}
+
+.container p{
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.container a:link, .container a:visited {
+    margin-top: 30px;
+    background-color: #34495e;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+  }
+  
+  .container a:hover, .container a:active {
+    background-color: white;
+    color: #34495e;
+  }
